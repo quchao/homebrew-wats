@@ -1,3 +1,4 @@
+# Modified from https://github.com/Homebrew/homebrew-core/blob/master/Formula/haproxy.rb
 class HaproxyLibressl < Formula
   desc "Reliable, high performance TCP/HTTP load balancer w/ LibreSSL"
   homepage "http://www.haproxy.org/"
@@ -69,12 +70,15 @@ class HaproxyLibressl < Formula
           <string>#{opt_sbin}/haproxy</string>
           <string>-f</string>
           <string>#{etc}/haproxy/haproxy.cfg</string>
-          <string>-p</string>
-          <string>#{var}/haproxy.pid</string>
-          <string>-D</string>
         </array>
+        <key>UserName</key>
+        <string>nobody</string>
         <key>WorkingDirectory</key>
         <string>#{var}</string>
+        <key>StandardErrorPath</key>
+        <string>/dev/null</string>
+        <key>StandardOutPath</key>
+        <string>/dev/null</string>
       </dict>
     </plist>
   EOS
