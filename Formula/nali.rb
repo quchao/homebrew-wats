@@ -2,13 +2,13 @@ class Nali < Formula
   desc "A tool to display geolocation info of an IP (in Chinese) which could be used in pipelines as well."
   homepage "https://github.com/soffchen/qqwry/tree/master/nali"
   url "https://github.com/soffchen/qqwry/archive/cf861215810b26c02ad340b98b55de8357f64ca8.zip"
-  version "1.0.0"
+  version "1.0.1"
   sha256 "512d555037055b302db18564c8d5c3b817681ad1bf94d8bb402a124658198442"
 
   option "without-dnsutils-scripts", "Compile without a bunch of scripts which help to pipe nali with dig, nslookup, ping, tracepath & traceroute."
 
   resource "qqwry_dat" do
-    url "https://github.com/QuChao/homebrew-wats/blob/master/Resources/qqwry.dat?raw=true"
+    url "https://media.githubusercontent.com/media/QuChao/homebrew-wats/master/Resources/qqwry.dat"
     sha256 "6cd616f09acf62be57d373ac1a58a915a75377008fde058005bfcdaea793a696"
   end
 
