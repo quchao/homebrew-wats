@@ -2,9 +2,9 @@
 class HaproxyLibressl < Formula
   desc "Reliable, high performance TCP/HTTP load balancer w/ LibreSSL"
   homepage "http://www.haproxy.org/"
-  url "http://www.haproxy.org/download/1.6/src/haproxy-1.6.9.tar.gz"
-  version "1.6.9"
-  sha256 "cf7d2fa891d2ae4aa6489fc43a9cadf68c42f9cb0de4801afad45d32e7dda133"
+  url "http://www.haproxy.org/download/1.7/src/haproxy-1.7.1.tar.gz"
+  version "1.7.1"
+  sha256 "56a7f5e919755d9b01b64f91b497c2c4eabdbe3a6fd84f7e5192a264097d8759"
 
   conflicts_with "haproxy", :because => "haproxy-libressl symlink with the name for compatibility with haproxy"
 
