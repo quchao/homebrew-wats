@@ -2,9 +2,9 @@
 class DnsmasqFastLookup < Formula
   desc "A fork of the original lightweight DNS forwarder and DHCP server, featuring fast ipset/server/address lookups."
   homepage "https://github.com/infinet/dnsmasq"
-  url "https://github.com/infinet/dnsmasq/archive/fastlookup.zip"
-  version "1.0.0"
-  sha256 "18c6e4e9aef40795b6fafe622b62608da3df353265c85cba857c7ea83a5c0330"
+  url "https://github.com/infinet/dnsmasq/archive/137dcbc95d9240e492c913f2217795b028be805e.zip"
+  version "r20170221"
+  sha256 "d8d181672458626764ec78076928143d7033d2c28986db110c18e174a93c4752"
 
   conflicts_with "dnsmasq", :because => "dnsmasq-fast-lookup symlink with the name for compatibility with dnsmasq"
 
