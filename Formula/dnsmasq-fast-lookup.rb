@@ -3,7 +3,7 @@ class DnsmasqFastLookup < Formula
   desc "A fork of the original lightweight DNS forwarder and DHCP server, featuring fast ipset/server/address lookups."
   homepage "https://github.com/infinet/dnsmasq"
   url "https://github.com/infinet/dnsmasq/archive/137dcbc95d9240e492c913f2217795b028be805e.zip"
-  version "1.0.0.r20170221"
+  version "2.72"
   sha256 "d8d181672458626764ec78076928143d7033d2c28986db110c18e174a93c4752"
 
   conflicts_with "dnsmasq", :because => "dnsmasq-fast-lookup symlink with the name for compatibility with dnsmasq"
@@ -36,6 +36,9 @@ class DnsmasqFastLookup < Formula
     inreplace "Makefile" do |s|
       s.change_make_var! "CFLAGS", ENV.cflags
     end
+
+    #Fix version number
+    inreplace "VERSION", "$Format:%d$", "#{version}"
 
     system "make", "install", "PREFIX=#{prefix}"
 
@@ -78,7 +81,7 @@ class DnsmasqFastLookup < Formula
         <key>RunAtLoad</key>
         <true/>
         <key>KeepAlive</key>
-        <false/>
+        <true/>
         <key>ProgramArguments</key>
         <array>
           <string>#{opt_sbin}/dnsmasq</string>

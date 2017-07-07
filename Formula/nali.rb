@@ -9,7 +9,7 @@ class Nali < Formula
 
   resource "qqwry_dat" do
     url "https://media.githubusercontent.com/media/QuChao/homebrew-wats/master/Resources/qqwry.dat"
-    sha256 "e3649e3a2cdb2b20e19da3e96eacc10d8bd889b1a27ed926c308418e828ac55d"
+    sha256 "77ced2cd99243cd54eb4f405cc1b15b7125cc6474f96946d7bad2e3746a6d5d2"
   end
 
   def install
