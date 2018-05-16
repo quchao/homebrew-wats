@@ -34,19 +34,19 @@ class Nali < Formula
   end
 
   def caveats
-    s = <<-EOS.undent
+    s = <<-EOS
     To query geolocation info of a given IP, just run:
       nali 127.0.0.1
     EOS
 
     if build.with? "dnsutils-scripts"
-      s += <<-EOS.undent
+      s += <<-EOS
     Several handy scripts are created to help you use dnsutils with nali, they're:
       nali-traceroute, nali-tracepath, nali-dig, nali-nslookup & nali-ping
       EOS
     end
 
-    s += <<-EOS.undent
+    s += <<-EOS
     Or your could just pipe it:
       ping 127.0.0.1 | nali
     To update the geolocation data (qqwry.dat), just run (and you should):

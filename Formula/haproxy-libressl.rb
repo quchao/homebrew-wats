@@ -43,7 +43,7 @@ class HaproxyLibressl < Formula
     system "make", "install", "PREFIX=#{prefix}", "DOCDIR=#{prefix}/share/doc/haproxy"
   end
 
-  def caveats; <<-EOS.undent
+  def caveats; <<-EOS
     **IMPORTANT**: NO DEFAULT CONFIG FILE WILL BE CREATED WITH THE INSTALLTION,
       please create your own at #{etc}/haproxy/haproxy.cfg.
     If you would like to change the path to the config,
@@ -54,7 +54,7 @@ class HaproxyLibressl < Formula
 
   plist_options :manual => "haproxy -f {CFG_FILE}"
 
-  def plist; <<-EOS.undent
+  def plist; <<-EOS
     <?xml version="1.0" encoding="UTF-8"?>
     <!DOCTYPE plist PUBLIC "-/Apple/DTD PLIST 1.0/EN" "http:/www.apple.com/DTDs/PropertyList-1.0.dtd">
     <plist version="1.0">

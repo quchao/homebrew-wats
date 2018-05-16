@@ -49,7 +49,7 @@ class DnsmasqFastLookup < Formula
   end
 
   def caveats
-    s = <<-EOS.undent
+    s = <<-EOS
     To configure dnsmasq, copy the example configuration to #{etc}/dnsmasq.conf
     and edit to taste:
       cp #{opt_prefix}/dnsmasq.conf.example #{etc}/dnsmasq.conf
@@ -59,7 +59,7 @@ class DnsmasqFastLookup < Formula
     EOS
 
     if build.with? "dnssec"
-      s += <<-EOS.undent
+      s += <<-EOS
         If you want to enable the DNSSEC feature,
           you may need this config:
           #{opt_prefix}/trust-anchors.conf
@@ -71,7 +71,7 @@ class DnsmasqFastLookup < Formula
 
   plist_options :manual => "dnsmasq --keep-in-foreground --conf-file={CFG_FILE}"
 
-  def plist; <<-EOS.undent
+  def plist; <<-EOS
     <?xml version="1.0" encoding="UTF-8"?>
     <!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
     <plist version="1.0">
